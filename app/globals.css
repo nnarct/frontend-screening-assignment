@@ -1,6 +1,7 @@
-/* @tailwind base; */
-/* @tailwind components; */
-/* @tailwind utilities; */
+/* use tailwind css */
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities;
 
 html,
 body {
@@ -18,3 +19,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* add default style for input */
+input[type=text], input[type=number]{
+  border: solid 1px #747474;
+  border-radius: 4px;
+  background: white;
+  padding: .15rem .35rem;
+}
+

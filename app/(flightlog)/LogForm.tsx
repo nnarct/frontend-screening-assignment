@@ -68,7 +68,8 @@ function LogForm(props) {
         />
       </div>
       <div style={{ flex: 1, display: "flex", alignItems: "flex-end" }}>
-        <button onClick={handleSubmit}>Submit</button>
+        {/* Styled the submit button */}
+        <button className="cursor-pointer px-[0.25rem] py-[0.15rem] text-white rounded bg-blue-500 hover:ring hover:ring-2" onClick={handleSubmit}>Submit</button>
       </div>
     </div>
   );
