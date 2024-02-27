@@ -14,16 +14,15 @@ export default function Home() {
   const [logs, setLogs] = useState([]);
 
   const handleAddLog = useCallback(
-    (log) => {
-      logs.push(log);
-      setLogs(logs);
+    (log: any) => {
+      setLogs(prevLogs => [...prevLogs, log]);
     },
     [logs]
   );
 
   useEffect(() => {
     const fetch = async () => {
-      const data = await flightLogService.getLogs();
+      const data : any = await flightLogService.getLogs();
       setLogs(data);
     };
 
