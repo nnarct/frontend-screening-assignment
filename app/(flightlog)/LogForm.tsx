@@ -33,8 +33,8 @@ function LogForm(props) {
         </label>
         <input
           type="text"
-          id="pname"
-          name="pname"
+          id="passengerName" // Change id and name to match key of emptyForm
+          name="passengerName"
           value={formData.passengerName}
           onChange={handleChange}
         />
