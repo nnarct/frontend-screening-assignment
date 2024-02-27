@@ -25,13 +25,18 @@ function LogCard(props) {
           fontWeight: "bold",
         }}
       >
-        <span style={{ flex: 1 }}>Passenger Name</span>
+        {/* Changed size of passenger's name column and timestamp column */}
+        <span style={{ flex: 2 }}>Passenger Name</span>
         <span style={{ flex: 1 }}>Airport</span>
-        <span style={{ flex: 1 }}>Timestamp</span>
+        <span style={{ flex: 1.5 }}>Timestamp</span>
+        {/* Add date time for easy to read */}
+        <span style={{ flex: 2 }}>Date, Time</span> 
         <span style={{ flex: 1 }}>Type</span>
       </div>
-      {logs.map((item) => (
-        <LogItem key={`${item.passengerName}`} item={item}></LogItem>
+      {/* Add type to avoid error alert */}
+      {logs.map((item: { passengerName: any; }) => (
+        // Use self-closing tag
+        <LogItem key={`${item.passengerName}`} item={item} />
       ))}
     </div>
   );
