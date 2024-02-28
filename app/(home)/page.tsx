@@ -6,6 +6,7 @@ import styles from "./Home.module.css";
 import { FlightLogService } from "../(flightlog)/fightlog.service";
 import LogCard from "../(flightlog)/LogCard";
 import LogForm from "../(flightlog)/LogForm";
+import { AvgTime } from "../(flightlog)/AvgTime";
 // import BoardingPassCard from "../(boardingpass)/BoardingPassCard";
 
 const flightLogService = new FlightLogService();
@@ -31,6 +32,7 @@ export default function Home() {
         },
       }
       setLogs(prevLogs => [...prevLogs, flight]);
+      return true
     },
     [logs]
   );
@@ -38,6 +40,7 @@ export default function Home() {
   const handleAddArrivalLog = useCallback(
     // Function to handle adding an arrival log
     (log: any) => {
+      let pass = true
       setLogs(prevLogs => {
         
         const id = Number(log.departureID) // Convert string to number
@@ -52,14 +55,15 @@ export default function Home() {
           const updatedObject = { ...prevLogs[index], arrival: { airport: log.airport, timestamp: log.timestamp }, isArrived: true };
 
           // Create a new array with the updated object at the same index
-          const output = [...prevLogs.slice(0, 1), updatedObject, ...prevLogs.slice(index + 1)];
+          const output = [...prevLogs.slice(0, index), updatedObject, ...prevLogs.slice(index + 1)];
           return output;
         } else {
-          console.log("Object not found in logs with id", id, "for the passenger", log.passengerName);
+          pass = false
           // Return the previous state without modifications
           return prevLogs;
         }
       });
+      return pass
     },
     [logs]
   );
@@ -105,6 +109,7 @@ export default function Home() {
             onSubmit={handleAddArrivalLog}
           ></LogForm>
         </div>
+        <AvgTime logs={logs}/>
         {/* Render boarding pass here */}
         {/* {[].map((_, i) => ( */}
         {/*   <BoardingPassCard key={i} /> */}
