@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const formatDuration = (durationSeconds: number) => {
   const days = Math.floor(durationSeconds / (3600 * 24));
@@ -19,6 +19,7 @@ export const AvgTime = (props) => {
   const { logs } = props;
 
   const [lastUpdate, setLastUpdate] = useState(new Date());
+  const [avg, setAvg] = useState([]);
 
   const calculateAvgTime = () => {
     const routeStats = logs.reduce(
@@ -56,21 +57,22 @@ export const AvgTime = (props) => {
     return routesArray;
   };
 
-  const [avg, setAvg] = useState([]);
-
   return (
     <>
       <div>
-        <span>Last update: {lastUpdate.toLocaleString()}</span>
-
-        {avg &&
-          avg.map((route) => {
-            return (
-              <div>
-                {route.departure} - {route.arrival} : {route.avg}
-              </div>
-            );
-          })}
+        <div className="bg-gray-300 rounded w-fit px-2">
+          Last update: {lastUpdate.toLocaleString()}
+        </div>
+        <div>
+          {avg &&
+            avg.map((route) => {
+              return (
+                <li>
+                  {route.departure} - {route.arrival} : {route.avg}
+                </li>
+              );
+            })}
+        </div>
         <button
           onClick={calculateAvgTime}
           className="cursor-pointer bg-green-500 border border-1 border-green-500 hover:bg-white text-green-900 rounded-xl py-1 px-2 mt-1"
