@@ -14,6 +14,8 @@ function LogItem(props) {
 
   return (
     <div style={{ display: "flex" }}>
+      {/* Add [id] column to display [id] of the log */}
+      <span style={{ flex: 0.5 }} className="text-center">{item.id}</span>
         {/* Changed size of passenger's name column and timestamp column */}
       <span style={{ flex: 2 }}>{item.passengerName}</span>
       <span style={{ flex: 1 }}>{item.airport}</span>
