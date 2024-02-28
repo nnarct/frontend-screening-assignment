@@ -13,16 +13,60 @@ const flightLogService = new FlightLogService();
 export default function Home() {
   const [logs, setLogs] = useState([]);
 
-  const handleAddLog = useCallback(
+  // Separate functions to handle logical processes for adding departure and arrival logs respectively
+  const handleAddDepartureLog = useCallback(
+    // Function to handle adding a departure log
     (log: any) => {
-      setLogs(prevLogs => [...prevLogs, log]);
+      const flight = {
+        id: logs.length + 1,
+        isArrived: false,
+        passengerName: log.passengerName,
+        departure: {
+          airport: log.airport,
+          timestamp: log.timestamp
+        },
+        arrival: {
+          airport: null,
+          timestamp: null
+        },
+      }
+      setLogs(prevLogs => [...prevLogs, flight]);
+    },
+    [logs]
+  );
+
+  const handleAddArrivalLog = useCallback(
+    // Function to handle adding an arrival log
+    (log: any) => {
+      setLogs(prevLogs => {
+        
+        const id = Number(log.departureID) // Convert string to number
+
+        // Find the index of the object in prevLogs where object.id matches id
+        // and object.passengerName matches form's passengerName
+        // and the flight must not have arrived
+        const index = prevLogs.findIndex(obj => (obj.id === id && obj.passengerName === log.passengerName && obj.isArrived === false));
+
+        if (index !== -1) {
+          // Create a copy of the object with the arrival property updated
+          const updatedObject = { ...prevLogs[index], arrival: { airport: log.airport, timestamp: log.timestamp }, isArrived: true };
+
+          // Create a new array with the updated object at the same index
+          const output = [...prevLogs.slice(0, 1), updatedObject, ...prevLogs.slice(index + 1)];
+          return output;
+        } else {
+          console.log("Object not found in logs with id", id, "for the passenger", log.passengerName);
+          // Return the previous state without modifications
+          return prevLogs;
+        }
+      });
     },
     [logs]
   );
 
   useEffect(() => {
     const fetch = async () => {
-      const data : any = await flightLogService.getLogs();
+      const data: any = await flightLogService.getLogs();
       setLogs(data);
     };
 
@@ -49,7 +93,7 @@ export default function Home() {
             style={{ width: "100%" }}
             data={logs}
             type={"departure"}
-            onSubmit={handleAddLog}
+            onSubmit={handleAddDepartureLog}
           ></LogForm>
         </div>
         <div className={styles.card} style={{ margin: 16, width: "100%" }}>
@@ -58,7 +102,7 @@ export default function Home() {
             style={{ width: "100%" }}
             data={logs}
             type={"arrival"}
-            onSubmit={handleAddLog}
+            onSubmit={handleAddArrivalLog}
           ></LogForm>
         </div>
         {/* Render boarding pass here */}
