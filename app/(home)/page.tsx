@@ -109,7 +109,11 @@ export default function Home() {
             onSubmit={handleAddArrivalLog}
           ></LogForm>
         </div>
-        <AvgTime logs={logs}/>
+        <div className={styles.card} style={{ margin: 16, width: "100%" }}>
+          <h2>Average time of route</h2>
+          <AvgTime logs={logs} />
+        </div>
+      
         {/* Render boarding pass here */}
         {/* {[].map((_, i) => ( */}
         {/*   <BoardingPassCard key={i} /> */}
