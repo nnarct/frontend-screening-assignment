@@ -21,7 +21,7 @@ a {
 }
 
 /* add default style for input */
-input[type=text], input[type=number]{
+input[type=text], input[type=number], input[type=datetime-local]{
   border: solid 1px #747474;
   border-radius: 4px;
   background: white;

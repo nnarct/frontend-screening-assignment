@@ -3,14 +3,14 @@ import { useState, useCallback } from "react";
 type emptyFormType = {
   passengerName: string,
   airport: string,
-  timestamp: string,
+  timestamp: number,
   departureID: null | number
 }
 
 const emptyForm: emptyFormType = {
   passengerName: "",
   airport: "",
-  timestamp: "",
+  timestamp: 0,
   departureID: null
 };
 
@@ -22,6 +22,7 @@ function LogForm(props) {
   const [errorText, setErrorText] = useState(null) // Create variable for error text message
 
   const handleSubmit = useCallback(() => {
+    formData.timestamp = new Date( formData.timestamp ).getTime() / 1000;
     const res = onSubmit({ ...formData, type }) // Call onSubmit() and get the response into the res
     if (res === true)
       setFormData(emptyForm); // if the data has been submitted successfully with return true, reset form
@@ -87,10 +88,10 @@ function LogForm(props) {
         style={{ flex: 1, display: "flex", flexDirection: "column", rowGap: 4 }}
       >
         <label htmlFor="timestamp" style={{ fontWeight: "bold" }}>
-          Timestamp:
+          Date-time:
         </label>
         <input
-          type="text"
+          type="datetime-local"
           id="timestamp"
           name="timestamp"
           value={formData.timestamp}
