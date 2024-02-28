@@ -19,9 +19,13 @@ function LogForm(props) {
 
   const [formData, setFormData] = useState(emptyForm);
 
-  const [errorText, setErrorText] = useState(null) // Create variable for error text message
+  const [errorText, setErrorText] = useState<string|null>(null) // Create variable for error text message
 
   const handleSubmit = useCallback(() => {
+    if(formData.passengerName === "" || formData.airport === "" || formData.timestamp.toString().length === 1){
+      setErrorText("Please fill all field")
+      return;
+    }
     formData.timestamp = new Date( formData.timestamp ).getTime() / 1000;
     const res = onSubmit({ ...formData, type }) // Call onSubmit() and get the response into the res
     if (res === true)
@@ -52,7 +56,7 @@ function LogForm(props) {
           type="number"
           id="departureID" // Change id and name to match key of emptyForm
           name="departureID"
-          value={formData.departureID}
+          value={formData.departureID | 0}
           onChange={handleChange}
         />
       </div>}
