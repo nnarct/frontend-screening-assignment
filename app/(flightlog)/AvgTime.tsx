@@ -64,14 +64,13 @@ export const AvgTime = (props) => {
           Last update: {lastUpdate.toLocaleString()}
         </div>
         <div>
-          {avg &&
-            avg.map((route) => {
-              return (
-                <li>
-                  {route.departure} - {route.arrival} : {route.avg}
-                </li>
-              );
-            })}
+          {avg?.map((route) => {
+            return (
+              <li key={`${route.departure}${route.arrival}`}>
+                {route.departure} - {route.arrival} : {route.avg}
+              </li>
+            );
+          })}
         </div>
         <button
           onClick={calculateAvgTime}
