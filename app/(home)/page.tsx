@@ -7,7 +7,7 @@ import { FlightLogService } from "../(flightlog)/fightlog.service";
 import LogCard from "../(flightlog)/LogCard";
 import LogForm from "../(flightlog)/LogForm";
 import { AvgTime } from "../(flightlog)/AvgTime";
-// import BoardingPassCard from "../(boardingpass)/BoardingPassCard";
+import BoardingPassCard from "../(boardingpass)/BoardingPassCard";
 
 const flightLogService = new FlightLogService();
 
@@ -115,9 +115,9 @@ export default function Home() {
         </div>
       
         {/* Render boarding pass here */}
-        {/* {[].map((_, i) => ( */}
-        {/*   <BoardingPassCard key={i} /> */}
-        {/* ))} */}
+        {logs.map((log, i) => {
+          return  log.isArrived ?  <BoardingPassCard key={i} log={log} /> : null
+        })} 
       </main>
 
       <footer className={styles.footer}>
