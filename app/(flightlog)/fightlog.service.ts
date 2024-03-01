@@ -4,13 +4,17 @@ type flightLogType = {
   id: number,
   passengerName: string,
   isArrived: boolean,
+  seat: string,
+  flightNumber: string,
+  gate: string,
+  class: string | "Business" | "Economy" | "First Class"
   departure: {
     airport: string,
-    timestamp: number
+    timestamp: number,
   },
   arrival: {
     airport: string | null,
-    timestamp: number | null
+    timestamp: number | null,
   }
 }
 
@@ -20,6 +24,10 @@ export class FlightLogService {
       id: 1,
       passengerName: "cherprang",
       isArrived: true,
+      flightNumber: "A 0137",
+      seat: "26A",
+      gate: "18",
+      class: "Economy",
       departure: {
         airport: "bangkok",
         timestamp:1630454400,
@@ -33,6 +41,10 @@ export class FlightLogService {
       id: 2,
       passengerName: "sita",
       isArrived: false,
+      flightNumber: "A 0137",
+      seat: "26A",
+      gate: "18",
+      class: "Business",
       departure: {
         airport: "chiangmai",
         timestamp:1630627200
