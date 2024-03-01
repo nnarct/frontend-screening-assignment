@@ -49,14 +49,15 @@ function LogForm(props) {
       {type === "arrival" && <div
         style={{ flex: 1, display: "flex", flexDirection: "column", rowGap: 4 }}
       >
-        <label htmlFor="pname" style={{ fontWeight: "bold" }}>
+        <label htmlFor="departureID" style={{ fontWeight: "bold" }}>
           Departure ID:
         </label>
         <input
           type="number"
           id="departureID" // Change id and name to match key of emptyForm
           name="departureID"
-          value={formData.departureID | 0}
+          min="1"
+          value={formData.departureID}
           onChange={handleChange}
         />
       </div>}
