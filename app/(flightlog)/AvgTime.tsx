@@ -1,4 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { flightLogType } from "./fightlog.service";
+
+type routeType = {
+  departure: string;
+  arrival: string;
+  avg: string;
+};
 
 const formatDuration = (durationSeconds: number) => {
   const days = Math.floor(durationSeconds / (3600 * 24));
@@ -15,16 +22,16 @@ const formatDuration = (durationSeconds: number) => {
   return parts.join(" ");
 };
 
-export const AvgTime = (props) => {
+export const AvgTime = (props: { logs: flightLogType[] }) => {
   const { logs } = props;
 
   const [lastUpdate, setLastUpdate] = useState(new Date());
-  const [avg, setAvg] = useState([]);
+  const [avg, setAvg] = useState<routeType[]>([]);
 
   const calculateAvgTime = () => {
     const routeStats = logs.reduce(
       (
-        stats: { [x: string]: { count: number } },
+        stats: any,
         log: {
           isArrived: boolean;
           departure: { airport: string; timestamp: number };
@@ -64,7 +71,7 @@ export const AvgTime = (props) => {
           Last update: {lastUpdate.toLocaleString()}
         </div>
         <div>
-          {avg?.map((route) => {
+          {avg?.map((route: routeType) => {
             return (
               <li key={`${route.departure}${route.arrival}`}>
                 {route.departure} - {route.arrival} : {route.avg}
