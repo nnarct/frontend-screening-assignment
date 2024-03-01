@@ -41,9 +41,9 @@ export class FlightLogService {
       id: 2,
       passengerName: "sita",
       isArrived: false,
-      flightNumber: "A 0137",
-      seat: "26A",
-      gate: "18",
+      flightNumber: "B 625",
+      seat: "32F",
+      gate: "A1",
       class: "Business",
       departure: {
         airport: "chiangmai",
