@@ -1,6 +1,6 @@
 // Restructure flight log data type
 
-type flightLogType = {
+export type flightLogType = {
   id: number,
   passengerName: string,
   isArrived: boolean,
