@@ -22,7 +22,7 @@ function BoardingPassCard(props) {
 
   return (
     <>
-      <div className="bg-sky-500 rounded-xl shadow-xl grid grid-cols-12 w-5/6">
+      <div className="bg-sky-500 rounded-xl shadow-xl grid grid-cols-12 w-5/6 max-w-[1000px]">
         <div className="text-white col-span-2 relative">
           <Image
             src={cleverseLogo}
@@ -62,7 +62,7 @@ function BoardingPassCard(props) {
             </GirdDetail>
             <GirdDetail label="To">{log.arrival.airport}</GirdDetail>
             <GirdDetail bold label="Gate">
-              {log.gate}
+              {log.gate.length === 0 ? 'N/A' : log.gate}
             </GirdDetail>
             <GirdDetail bold label="Board till">
               {/* Assume board till is 20mins before departure time */}
@@ -98,7 +98,7 @@ function BoardingPassCard(props) {
               <span className="leading-3 text-xs">{log.seat}</span>
             </GirdDetail>
             <GirdDetail bold label="Gate" className="py-1">
-              <span className="leading-3 text-xs">{log.gate}</span>
+              <span className="leading-3 text-xs">{log.gate.length === 0 ? 'N/A' : log.gate}</span>
               <Image
                 src={cleverseLogo}
                 alt="airline_logo"
