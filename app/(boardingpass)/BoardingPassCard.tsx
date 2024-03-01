@@ -22,7 +22,7 @@ function BoardingPassCard(props) {
 
   return (
     <>
-      <div className="bg-sky-500 pb-4 rounded-xl shadow-xl grid grid-cols-12 w-5/6">
+      <div className="bg-sky-500 rounded-xl shadow-xl grid grid-cols-12 w-5/6">
         <div className="text-white col-span-2 relative">
           <Image
             src={cleverseLogo}
@@ -40,13 +40,13 @@ function BoardingPassCard(props) {
         <div className="text-white col-span-3 p-3 flex justify-end">
           <div className="text-right text-lg">
             Boarding pass<br></br>
-            <span className="italic">Business</span>
+            <span className="italic">{log.class}</span>
           </div>
         </div>
-        <div className="bg-white col-span-2 flex-">
-          {/* <Image src={barcode} alt="barcode" style={{ transform: 'rotate(90deg)' }} className="bg-red-400 w-3/4"/> */}
+        <div className="bg-white col-span-2 relative">
+          <Image src={barcode} alt="barcode" className="mx-auto h-full mt-7" />
         </div>
-        <div className="bg-white col-span-7 border-r border-dashed">
+        <div className="bg-white pt-3 col-span-7 border-r border-dashed">
           <div className="grid grid-cols-3 px-3">
             <GirdDetail label="Passenger name">{log.passengerName}</GirdDetail>
             <GirdDetail label="Date">{formattedDate}</GirdDetail>
@@ -70,7 +70,7 @@ function BoardingPassCard(props) {
             </GirdDetail>
           </div>
         </div>
-        <div className="bg-white col-span-3">
+        <div className="bg-white pt-3 pl-3 col-span-3">
           <GirdDetail label="Passenger name" className="py-1">
             {log.passengerName}
           </GirdDetail>
@@ -93,15 +93,21 @@ function BoardingPassCard(props) {
               <span className="leading-3 text-xs">{log.flightNumber}</span>
             </GirdDetail>
           </div>
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-4 relative">
             <GirdDetail bold label="Seat" className="py-1">
               <span className="leading-3 text-xs">{log.seat}</span>
             </GirdDetail>
             <GirdDetail bold label="Gate" className="py-1">
               <span className="leading-3 text-xs">{log.gate}</span>
+              <Image
+                src={cleverseLogo}
+                alt="airline_logo"
+                className="absolute w-12 right-2 -bottom-3 z-10 rounded-full border-2 border-white"
+              />
             </GirdDetail>
           </div>
         </div>
+        <div className="col-span-9 border-r border-dashed py-2"></div>
       </div>
     </>
   );
@@ -120,8 +126,10 @@ const GirdDetail = ({
 }) => {
   return (
     <div className={`p-2 ${className}`}>
-      <div className="text-gray-600 text-sm leading-5">{label}</div>
-      <div className={`${bold ? "font-bold" : ""} uppercase leading-3`}>
+      <div className="text-gray-500 text-sm leading-5 medium">{label}</div>
+      <div
+        className={`${bold ? "font-bold" : "font-medium"} uppercase leading-3`}
+      >
         {children}
       </div>
     </div>
