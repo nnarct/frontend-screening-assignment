@@ -24,15 +24,15 @@ export default function Home() {
         passengerName: log.passengerName,
         departure: {
           airport: log.airport,
-          timestamp: log.timestamp
+          timestamp: log.timestamp,
         },
         arrival: {
           airport: null,
-          timestamp: null
+          timestamp: null,
         },
-      }
-      setLogs(prevLogs => [...prevLogs, flight]);
-      return true
+      };
+      setLogs((prevLogs) => [...prevLogs, flight]);
+      return true;
     },
     [logs]
   );
@@ -40,30 +40,42 @@ export default function Home() {
   const handleAddArrivalLog = useCallback(
     // Function to handle adding an arrival log
     (log: any) => {
-      let pass = true
-      setLogs(prevLogs => {
-        
-        const id = Number(log.departureID) // Convert string to number
+      let pass = true;
+      setLogs((prevLogs) => {
+        const id = Number(log.departureID); // Convert string to number
 
         // Find the index of the object in prevLogs where object.id matches id
         // and object.passengerName matches form's passengerName
         // and the flight must not have arrived
-        const index = prevLogs.findIndex(obj => (obj.id === id && obj.passengerName === log.passengerName && obj.isArrived === false));
+        const index = prevLogs.findIndex(
+          (obj) =>
+            obj.id === id &&
+            obj.passengerName === log.passengerName &&
+            obj.isArrived === false
+        );
 
         if (index !== -1) {
           // Create a copy of the object with the arrival property updated
-          const updatedObject = { ...prevLogs[index], arrival: { airport: log.airport, timestamp: log.timestamp }, isArrived: true };
+          const updatedObject = {
+            ...prevLogs[index],
+            arrival: { airport: log.airport, timestamp: log.timestamp },
+            isArrived: true,
+          };
 
           // Create a new array with the updated object at the same index
-          const output = [...prevLogs.slice(0, index), updatedObject, ...prevLogs.slice(index + 1)];
+          const output = [
+            ...prevLogs.slice(0, index),
+            updatedObject,
+            ...prevLogs.slice(index + 1),
+          ];
           return output;
         } else {
-          pass = false
+          pass = false;
           // Return the previous state without modifications
           return prevLogs;
         }
       });
-      return pass
+      return pass;
     },
     [logs]
   );
@@ -113,11 +125,15 @@ export default function Home() {
           <h2>Average time of route</h2>
           <AvgTime logs={logs} />
         </div>
-      
+
         {/* Render boarding pass here */}
-        {logs.map((log, i) => {
-          return  log.isArrived ?  <BoardingPassCard key={i} log={log} /> : null
-        })} 
+        <div className="flex flex-col w-full items-center space-y-8">
+          {logs.map((log, i) => {
+            return log.isArrived ? (
+              <BoardingPassCard key={i} log={log} />
+            ) : null;
+          })}{" "}
+        </div>
       </main>
 
       <footer className={styles.footer}>
