@@ -1,87 +1,85 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="194" height="80" version="1.1"
-   xmlns="http://www.w3.org/2000/svg">
-   <desc>*LOVE CLEVERSE*
-   </desc>
-
-   <g id="barcode" fill="#000000">
-      <rect x="0" y="0" width="194" height="80" fill="#FFFFFF" />
-      <rect x="0.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="3.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="5.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="8.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="11.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="13.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="15.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="18.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="20.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="23.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="26.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="29.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="31.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="34.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="37.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="39.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="42.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="45.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="47.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="49.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="52.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="55.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="57.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="61.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="63.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="65.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="68.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="71.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="73.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="76.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="78.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="81.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="84.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="87.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="89.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="91.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="93.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="96.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="98.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="101.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="104.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="107.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="109.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="113.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="115.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="117.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="120.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="123.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="125.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="127.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="130.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="133.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="135.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="139.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="141.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="143.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="146.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="148.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="150.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="154.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="156.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="158.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="161.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="163.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="167.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="169.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="172.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="174.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="178.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="180.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="182.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="185.00" y="0.00" width="1.00" height="80.00" />
-      <rect x="187.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="190.00" y="0.00" width="2.00" height="80.00" />
-      <rect x="193.00" y="0.00" width="1.00" height="80.00" />
-   </g>
+<svg width="80" height="129" viewBox="0 0 80 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_705_2)">
+<path d="M80 129L80 0L0 0L0 129H80Z" fill="white"/>
+<path d="M80 0.664948V0L0 0V0.664948L80 0.664948Z" fill="black"/>
+<path d="M80 2.66007V1.99512L0 1.99512V2.66007L80 2.66007Z" fill="black"/>
+<path d="M80 4.65509V3.3252L0 3.3252V4.65509L80 4.65509Z" fill="black"/>
+<path d="M80 6.64923V5.31934L0 5.31934V6.64923L80 6.64923Z" fill="black"/>
+<path d="M80 7.9794V7.31445L0 7.31445V7.9794L80 7.9794Z" fill="black"/>
+<path d="M80 9.30948V8.64453L0 8.64453V9.30948L80 9.30948Z" fill="black"/>
+<path d="M80 11.3045V9.97461L0 9.97461V11.3045L80 11.3045Z" fill="black"/>
+<path d="M80 12.6337V11.9688L0 11.9688V12.6337L80 12.6337Z" fill="black"/>
+<path d="M80 13.9638V13.2988L0 13.2988V13.9638L80 13.9638Z" fill="black"/>
+<path d="M80 16.6238V15.2939L0 15.2939V16.6238L80 16.6238Z" fill="black"/>
+<path d="M80 18.619V17.2891L0 17.2891V18.619L80 18.619Z" fill="black"/>
+<path d="M80 19.9482V19.2832L0 19.2832V19.9482L80 19.9482Z" fill="black"/>
+<path d="M80 21.9432V20.6133L0 20.6133V21.9432L80 21.9432Z" fill="black"/>
+<path d="M80 23.2733V22.6084L0 22.6084V23.2733L80 23.2733Z" fill="black"/>
+<path d="M80 25.2685V24.6035L0 24.6035V25.2685L80 25.2685Z" fill="black"/>
+<path d="M80 26.5976V25.9326L0 25.9326V26.5976L80 26.5976Z" fill="black"/>
+<path d="M80 29.2576V27.9277L0 27.9277V29.2576L80 29.2576Z" fill="black"/>
+<path d="M80 30.5878V29.9229L0 29.9229V30.5878L80 30.5878Z" fill="black"/>
+<path d="M80 31.9179V31.2529L0 31.2529V31.9179L80 31.9179Z" fill="black"/>
+<path d="M80 33.9119V32.582L0 32.582V33.9119L80 33.9119Z" fill="black"/>
+<path d="M80 35.907V34.5771L0 34.5771V35.907L80 35.907Z" fill="black"/>
+<path d="M80 37.2372V36.5723L0 36.5723V37.2372L80 37.2372Z" fill="black"/>
+<path d="M80 39.2322V37.9023L0 37.9023V39.2322L80 39.2322Z" fill="black"/>
+<path d="M80 41.2265V40.5615L0 40.5615V41.2265L80 41.2265Z" fill="black"/>
+<path d="M79.998 42.5575V41.8926L-0.00195312 41.8926V42.5575L79.998 42.5575Z" fill="black"/>
+<path d="M80 43.8866V43.2217L0 43.2217V43.8866L80 43.8866Z" fill="black"/>
+<path d="M80 46.5467V45.2168L0 45.2168V46.5467L80 46.5467Z" fill="black"/>
+<path d="M80 47.8759V47.2109L0 47.2109V47.8759L80 47.8759Z" fill="black"/>
+<path d="M80 49.8709V48.541L0 48.541V49.8709L80 49.8709Z" fill="black"/>
+<path d="M80 51.2011V50.5361L0 50.5361V51.2011L80 51.2011Z" fill="black"/>
+<path d="M80 53.1961V51.8662L0 51.8662V53.1961L80 53.1961Z" fill="black"/>
+<path d="M80 55.1902V53.8604L0 53.8604V55.1902L80 55.1902Z" fill="black"/>
+<path d="M80 56.5204V55.8555L0 55.8555V56.5204L80 56.5204Z" fill="black"/>
+<path d="M80 58.5155V57.8506L0 57.8506V58.5155L80 58.5155Z" fill="black"/>
+<path d="M80 59.8456V59.1807L0 59.1807V59.8456L80 59.8456Z" fill="black"/>
+<path d="M80 61.1757V60.5107L0 60.5107V61.1757L80 61.1757Z" fill="black"/>
+<path d="M80 63.1697V61.8398L0 61.8398V63.1697L80 63.1697Z" fill="black"/>
+<path d="M80 64.4999V63.835L0 63.835V64.4999L80 64.4999Z" fill="black"/>
+<path d="M80 65.83V65.165L0 65.165V65.83L80 65.83Z" fill="black"/>
+<path d="M80 68.4901V67.1602L0 67.1602V68.4901L80 68.4901Z" fill="black"/>
+<path d="M80 70.4842V69.1543L0 69.1543V70.4842L80 70.4842Z" fill="black"/>
+<path d="M80 71.8144V71.1494L0 71.1494V71.8144L80 71.8144Z" fill="black"/>
+<path d="M80 73.8094V72.4795L0 72.4795V73.8094L80 73.8094Z" fill="black"/>
+<path d="M80 75.8046V75.1396L0 75.1396V75.8046L80 75.8046Z" fill="black"/>
+<path d="M80 77.1337V76.4688L0 76.4688V77.1337L80 77.1337Z" fill="black"/>
+<path d="M80 78.4638V77.7988L0 77.7988V78.4638L80 78.4638Z" fill="black"/>
+<path d="M80 81.1238V79.7939L0 79.7939V81.1238L80 81.1238Z" fill="black"/>
+<path d="M80 82.454V81.7891L0 81.7891V82.454L80 82.454Z" fill="black"/>
+<path d="M80 83.7831V83.1182L0 83.1182V83.7831L80 83.7831Z" fill="black"/>
+<path d="M80 85.7781V84.4482L0 84.4482V85.7781L80 85.7781Z" fill="black"/>
+<path d="M80 87.7733V86.4434L0 86.4434V87.7733L80 87.7733Z" fill="black"/>
+<path d="M80 89.1034V88.4385L0 88.4385V89.1034L80 89.1034Z" fill="black"/>
+<path d="M80 91.0975V89.7676L0 89.7676V91.0975L80 91.0975Z" fill="black"/>
+<path d="M80 93.0927V92.4277L0 92.4277V93.0927L80 93.0927Z" fill="black"/>
+<path d="M80 94.4228V93.7578L0 93.7578V94.4228L80 94.4228Z" fill="black"/>
+<path d="M80 96.4178V95.0879L0 95.0879V96.4178L80 96.4178Z" fill="black"/>
+<path d="M80 97.747V97.082L0 97.082V97.747L80 97.747Z" fill="black"/>
+<path d="M80 99.0771V98.4121L0 98.4121V99.0771L80 99.0771Z" fill="black"/>
+<path d="M80 101.072V99.7422L0 99.7422V101.072L80 101.072Z" fill="black"/>
+<path d="M80 103.067V102.402L0 102.402V103.067L80 103.067Z" fill="black"/>
+<path d="M80 104.397V103.732L0 103.732V104.397L80 104.397Z" fill="black"/>
+<path d="M80 106.391V105.062L0 105.062V106.391L80 106.391Z" fill="black"/>
+<path d="M80 107.722V107.057L0 107.057V107.722L80 107.722Z" fill="black"/>
+<path d="M80 109.717V108.387L0 108.387V109.717L80 109.717Z" fill="black"/>
+<path d="M80 111.712V111.047L0 111.047V111.712L80 111.712Z" fill="black"/>
+<path d="M80 113.706V112.376L0 112.376V113.706L80 113.706Z" fill="black"/>
+<path d="M80 115.036V114.371L0 114.371V115.036L80 115.036Z" fill="black"/>
+<path d="M80 117.031V115.701L0 115.701V117.031L80 117.031Z" fill="black"/>
+<path d="M80 119.025V118.36L0 118.36V119.025L80 119.025Z" fill="black"/>
+<path d="M80 120.355V119.69L0 119.69V120.355L80 120.355Z" fill="black"/>
+<path d="M80 121.685V121.021L0 121.021V121.685L80 121.685Z" fill="black"/>
+<path d="M80 123.681V123.016L0 123.016V123.681L80 123.681Z" fill="black"/>
+<path d="M80 125.676V124.346L0 124.346V125.676L80 125.676Z" fill="black"/>
+<path d="M80 127.67V126.34L0 126.34V127.67L80 127.67Z" fill="black"/>
+<path d="M80 129V128.335H0V129H80Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_705_2">
+<rect width="129" height="80" fill="white" transform="matrix(0 1 -1 0 80 0)"/>
+</clipPath>
+</defs>
 </svg>
