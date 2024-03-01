@@ -95,7 +95,7 @@ function ArrivalForm(props: {
       <div className="flex gap-2">
         <div className="flex flex-col">
           <label htmlFor="departureID" className="font-bold">
-            Departure ID:
+            <span className="text-red-400">*</span>Departure ID:
           </label>
           <input
             type="number"
@@ -113,7 +113,7 @@ function ArrivalForm(props: {
         </div>
         <div className="flex flex-col">
           <label htmlFor="pname" className="font-bold">
-            Passenger Name:
+            <span className="text-red-400">*</span>Passenger Name:
           </label>
           <input
             type="text"
@@ -126,7 +126,7 @@ function ArrivalForm(props: {
         </div>
         <div className="flex flex-col">
           <label htmlFor="airport" className="font-bold">
-            Airport:
+            <span className="text-red-400">*</span>Airport:
           </label>
           <input
             type="text"
@@ -139,7 +139,7 @@ function ArrivalForm(props: {
         </div>
         <div className="flex flex-col">
           <label htmlFor="timestamp" className="font-bold">
-            Date-time:
+            <span className="text-red-400">*</span>Date-time:
           </label>
           <input
             type="datetime-local"

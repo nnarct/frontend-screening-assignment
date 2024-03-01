@@ -101,7 +101,7 @@ function DepartureForm(props: {
       <div className="flex gap-2 flex-wrap">
         <div className="flex flex-col">
           <label htmlFor="pname" className="font-bold">
-            Passenger Name:
+            <span className="text-red-400">*</span>Passenger Name:
           </label>
           <input
             type="text"
@@ -114,7 +114,7 @@ function DepartureForm(props: {
         </div>
         <div className="flex flex-col">
           <label htmlFor="airport" className="font-bold">
-            Airport:
+            <span className="text-red-400">*</span>Airport:
           </label>
           <input
             type="text"
@@ -127,7 +127,7 @@ function DepartureForm(props: {
         </div>
         <div className="flex flex-col">
           <label htmlFor="timestamp" className="font-bold">
-            Date-time:
+            <span className="text-red-400">*</span>Date-time:
           </label>
           <input
             type="datetime-local"
@@ -139,7 +139,7 @@ function DepartureForm(props: {
         </div>
         <div className="flex flex-col">
           <label htmlFor="flightNumber" className="font-bold">
-            Flight number:
+            <span className="text-red-400">*</span>Flight number:
           </label>
           <input
             type="text"
@@ -152,7 +152,7 @@ function DepartureForm(props: {
         </div>
         <div className="flex flex-col">
           <label htmlFor="seat" className="font-bold">
-            Seat:
+            <span className="text-red-400">*</span>Seat:
           </label>
           <input
             type="text"
@@ -178,7 +178,7 @@ function DepartureForm(props: {
         </div>
         <div className="flex flex-col">
           <label htmlFor="class" className="font-bold">
-            Class:
+            <span className="text-red-400">*</span>Class:
           </label>
           <input
             type="text"
